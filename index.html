@@ -509,10 +509,12 @@
       <label class="field"><input type="text" name="name" required autocomplete="name" placeholder=" "><span>Имя</span><i class="field__line"></i></label>
       <label class="field"><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder=" "><span>Телефон</span><i class="field__line"></i></label>
       <label class="field"><input type="text" name="business" required placeholder=" "><span>Чем занимается компания</span><i class="field__line"></i></label>
+      <label class="form__trap" aria-hidden="true">Сайт<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
       <button type="submit" class="btn btn--orange btn--block magnetic" data-cursor="Жми">
         <span class="btn__label">Записаться на разбор</span>
         <i class="btn__arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></i>
       </button>
+      <p class="form__error" role="alert" hidden></p>
       <p class="form__note"><i class="dot dot--pulse"></i>В октябре осталось <b>3 места</b></p>
       <div class="form__success" aria-live="polite">
         <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-15"/></svg>

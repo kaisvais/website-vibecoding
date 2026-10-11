@@ -592,18 +592,44 @@
       });
       if (!ok) { setTimeout(() => $$('.field', form).forEach((f) => f.classList.remove('is-error')), 1200); return; }
 
-      // TODO: отправить данные в CRM / Telegram
       const label = $('.btn__label', form);
+      const errBox = $('.form__error', form);
+      const initial = label.dataset.initial || (label.dataset.initial = label.textContent);
+      if (form.classList.contains('is-sending')) return;
+      form.classList.add('is-sending');
+      errBox.hidden = true;
       label.textContent = 'Отправляем…';
-      if (reduce) { $('.form__success', form).style.cssText = 'opacity:1;visibility:visible'; return; }
-      const tl = gsap.timeline({ delay: 0.6 });
-      tl.set('.form__success', { visibility: 'visible' })
-        .to('.form__success', { opacity: 1, duration: 0.5, ease: 'power2.out' })
-        .to('.form__success circle', { strokeDashoffset: 0, duration: 0.9, ease: 'power2.inOut' }, '-=.2')
-        .to('.form__success path', { strokeDashoffset: 0, duration: 0.5, ease: 'power2.out' }, '-=.2')
-        .from('.form__success b, .form__success span', { y: 20, opacity: 0, stagger: 0.1, duration: 0.8 }, '-=.3')
-        .add(() => burst(form), 0.9);
+
+      const data = Object.fromEntries(new FormData(form));
+      fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+        .then((r) => r.json().catch(() => ({})).then((j) => { if (!r.ok || !j.ok) throw new Error(j.error || r.status); }))
+        .then(() => {
+          form.reset();
+          showSuccess(form);
+        })
+        .catch(() => {
+          label.textContent = initial;
+          errBox.textContent = 'Не получилось отправить заявку. Попробуйте ещё раз через минуту.';
+          errBox.hidden = false;
+          if (!reduce) gsap.from(errBox, { y: -8, opacity: 0, duration: 0.5 });
+        })
+        .finally(() => form.classList.remove('is-sending'));
     });
+  }
+
+  function showSuccess(form) {
+    if (reduce) { $('.form__success', form).style.cssText = 'opacity:1;visibility:visible'; return; }
+    const tl = gsap.timeline({ delay: 0.2 });
+    tl.set('.form__success', { visibility: 'visible' })
+      .to('.form__success', { opacity: 1, duration: 0.5, ease: 'power2.out' })
+      .to('.form__success circle', { strokeDashoffset: 0, duration: 0.9, ease: 'power2.inOut' }, '-=.2')
+      .to('.form__success path', { strokeDashoffset: 0, duration: 0.5, ease: 'power2.out' }, '-=.2')
+      .from('.form__success b, .form__success span', { y: 20, opacity: 0, stagger: 0.1, duration: 0.8 }, '-=.3')
+      .add(() => burst(form), 0.5);
   }
 
   // разлёт частиц при успешной отправке
