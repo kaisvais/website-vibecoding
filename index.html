@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KAI Agency — автоматизация бизнеса с ИИ за 14 дней</title>
+  <meta name="description" content="Автоматизируем один рутинный процесс вашего бизнеса за 14 дней и вернём команде от 40 часов в месяц — или не возьмём оплату.">
+  <meta name="theme-color" content="#0D0D0C">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600&family=Inter:wght@400;500;600&family=Martian+Mono:wght@400;500&family=Unbounded:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/hero.webp">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-loading">
+
+<!-- ============ ПРЕЛОАДЕР ============ -->
+<div class="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <svg class="loader__mark" viewBox="0 0 40 40">
+      <path class="loader__ring" d="M34.77 17.4 A15 15 0 1 1 26.34 6.41" />
+      <circle class="loader__dot" cx="31.98" cy="10.97" r="3.2" />
+    </svg>
+    <div class="loader__count"><span class="loader__num">0</span><span>%</span></div>
+    <div class="loader__caption mono">Собираем процессы в систему</div>
+  </div>
+  <div class="loader__panel loader__panel--a"></div>
+  <div class="loader__panel loader__panel--b"></div>
+</div>
+
+<!-- ============ КУРСОР ============ -->
+<div class="cursor" aria-hidden="true"><div class="cursor__ring"><span class="cursor__label"></span></div><div class="cursor__dot"></div></div>
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<!-- ============ ШАПКА ============ -->
+<header class="header">
+  <a href="#top" class="logo" aria-label="KAI Agency — на главную">
+    <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M34.77 17.4 A15 15 0 1 1 26.34 6.41" /><circle cx="31.98" cy="10.97" r="3.2" /></svg>
+    <span class="logo__word">KAI<em>agency</em></span>
+  </a>
+  <nav class="nav" aria-label="Разделы">
+    <a href="#services">Услуги</a>
+    <a href="#why">Почему мы</a>
+    <a href="#process">Процесс</a>
+    <a href="#cases">Кейсы</a>
+    <span class="nav__pill" aria-hidden="true"></span>
+  </nav>
+  <a href="#cta" class="btn btn--dark btn--sm magnetic" data-cursor="Записаться"><span>Разбор бесплатно</span></a>
+</header>
+
+<main id="top">
+
+<!-- ============ 1. HERO ============ -->
+<section class="hero" data-theme="dark">
+  <div class="hero__glow"></div>
+  <div class="hero__meta container">
+    <span class="tag tag--glass"><i class="dot"></i>Автоматизация с ИИ</span>
+    <span class="tag tag--glass"><i class="dot dot--pulse"></i>Октябрь 2026 — 3 места</span>
+  </div>
+
+  <h2 class="hero__word" aria-hidden="true"><span>K</span><span>A</span><span>I</span></h2>
+
+  <div class="hero__stage container">
+    <div class="hero__card" data-depth>
+      <div class="hero__card-shine"></div>
+      <div class="hero__content">
+        <div class="hero__eyebrow mono"><i class="dot dot--aqua"></i>(00) KAI Agency</div>
+        <h1 class="hero__title split-lines">
+          Автоматизируем один рутинный процесс за&nbsp;<span class="hero__accent">14&nbsp;дней</span>
+        </h1>
+        <p class="hero__promise split-lines">и вернём команде от&nbsp;40&nbsp;часов в&nbsp;месяц — <mark>или не возьмём оплату</mark></p>
+        <p class="hero__lead fade-up">Пишем сервисы, ботов и интеграции под ваши процессы. Код создаём вместе с ИИ — поэтому сдаём за недели, а не за кварталы.</p>
+        <div class="hero__actions fade-up">
+          <a href="#cta" class="btn btn--light magnetic" data-cursor="Поехали">
+            <span>Разобрать мой процесс бесплатно</span>
+            <i class="btn__arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></i>
+          </a>
+          <p class="hero__note">30 минут в Zoom. Покажем, что автоматизировать<br>и сколько это сэкономит.</p>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <img class="hero__person" src="assets/img/hero.webp" alt="Девушка в хромированном AR-визоре" width="1300" height="1625">
+        <span class="chip chip--a" data-float="1"><i class="chip__icon"><svg viewBox="0 0 16 16"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h7A2.5 2.5 0 0 1 14 5.5v3A2.5 2.5 0 0 1 11.5 11H7l-3 2.5V11h.5"/></svg></i>Бот ответил за 3 сек</span>
+        <span class="chip chip--b" data-float="2"><i class="chip__icon chip__icon--aqua"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg></i>Заявка → CRM</span>
+        <span class="chip chip--c" data-float="3"><i class="chip__icon"><svg viewBox="0 0 16 16"><path d="M2 13V9M6 13V6M10 13V8M14 13V3"/></svg></i>Отчёт готов в 08:00</span>
+      </div>
+    </div>
+
+    <div class="hero__bento">
+      <article class="bento bento--dark">
+        <div class="bento__top mono"><span>Польза</span><span>01</span></div>
+        <div class="bento__num"><span class="count" data-to="40">0</span><small>+ ч</small></div>
+        <p>рутины в месяц возвращаем команде</p>
+        <div class="bento__bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </article>
+      <article class="bento bento--paper">
+        <div class="bento__top mono"><span>Конкретика</span><span>02</span></div>
+        <div class="bento__num"><span class="count" data-to="14">0</span><small>дней</small></div>
+        <p>один процесс — от разбора до запуска</p>
+        <div class="bento__track" aria-hidden="true"><span></span></div>
+      </article>
+      <article class="bento bento--aqua">
+        <div class="bento__top mono"><span>Гарантия</span><span>03</span></div>
+        <div class="bento__num"><span>0</span><small>оплаты</small></div>
+        <p>если не уложились в срок</p>
+        <svg class="bento__ring" viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="32"/><circle class="bento__ring-fill" cx="40" cy="40" r="32"/></svg>
+      </article>
+      <article class="bento bento--orange">
+        <div class="bento__top mono"><span>Октябрь</span><span>04</span></div>
+        <div class="avatars">
+          <img src="assets/img/avatar-1.webp" alt="" width="56" height="56">
+          <img src="assets/img/avatar-2.webp" alt="" width="56" height="56">
+          <img src="assets/img/avatar-4.webp" alt="" width="56" height="56">
+          <span class="avatars__plus">+</span>
+        </div>
+        <p><b>3 проекта</b> — столько берём в этом месяце, чтобы сдать каждый вовремя</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. БОЛИ ============ -->
+<section class="pains" id="pains" data-theme="light">
+  <div class="pains__pin">
+    <div class="container pains__grid">
+      <div class="pains__left">
+        <div class="label"><i class="dot"></i><span class="scramble">(01) Боли бизнеса</span></div>
+        <h2 class="h2 split-lines">Узнаёте свой бизнес?</h2>
+        <p class="lead fade-up">Пять сцен, которые мы видим почти в каждой компании до автоматизации. Если хотя бы одна про вас — дальше будет полезно.</p>
+        <figure class="pains__photo">
+          <img src="assets/img/pain.webp" alt="Уставший менеджер ночью среди бумаг и уведомлений" loading="lazy" width="1100" height="1467">
+          <figcaption>
+            <span class="mono">Непрочитанных</span>
+            <b class="pains__unread">0</b>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="pains__right">
+        <div class="pains__stack">
+          <article class="pain" data-i="1">
+            <div class="pain__head"><span class="pain__app pain__app--wa"></span><span class="mono">WhatsApp → Таблица</span><span class="pain__tag">Потерянные заявки</span></div>
+            <p>Менеджеры переносят заявки из WhatsApp в таблицу руками — и часть по дороге теряют.</p>
+          </article>
+          <article class="pain" data-i="2">
+            <div class="pain__head"><span class="pain__app pain__app--xl"></span><span class="mono">Отчёт_финал_v7.xlsx</span><span class="pain__tag">Решения вслепую</span></div>
+            <p>Отчёт для вас собирают два дня, а цифры в нём всё равно не сходятся.</p>
+          </article>
+          <article class="pain" data-i="3">
+            <div class="pain__head"><span class="pain__app pain__app--chat"></span><span class="mono">Клиент · ждёт ответа</span><span class="pain__tag">Ушедшие клиенты</span></div>
+            <p>Клиент ждёт ответа три часа и уходит к тому, кто ответил за пять минут.</p>
+          </article>
+          <article class="pain" data-i="4">
+            <div class="pain__head"><span class="pain__app pain__app--crm"></span><span class="mono">CRM · активных: 2/10</span><span class="pain__tag">Деньги на ветер</span></div>
+            <p>CRM купили, но ею пользуются два человека из десяти.</p>
+          </article>
+          <article class="pain" data-i="5">
+            <div class="pain__head"><span class="pain__app pain__app--hr"></span><span class="mono">Вакансия · ещё один менеджер</span><span class="pain__tag">Рост через найм</span></div>
+            <p>Чтобы вырасти, приходится нанимать ещё людей на ту же самую рутину.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="verdict container">
+    <p class="verdict__text">Проблема не в людях. Люди делают работу, которую должна делать <span class="verdict__accent">программа.</span></p>
+  </div>
+</section>
+
+<!-- ============ 3. УСЛУГИ ============ -->
+<section class="services" id="services" data-theme="dark">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <div class="label label--light"><i class="dot"></i><span class="scramble">(02) Услуги</span></div>
+        <h2 class="h2 split-lines">Что мы делаем.</h2>
+      </div>
+      <p class="lead lead--light fade-up">Пять направлений — одна цель: чтобы данные двигались сами, а люди занимались тем, за что им платят.</p>
+    </div>
+
+    <div class="svc-grid">
+      <!-- Боты -->
+      <article class="svc svc--orange svc--wide tilt" data-cursor="Подробнее">
+        <div class="svc__spot"></div>
+        <div class="svc__top mono"><span>01</span><span>ИИ-ассистенты и боты</span></div>
+        <div class="svc__body">
+          <div class="svc__text">
+            <h3>Отвечают клиентам за секунды</h3>
+            <p>Квалифицируют заявки, отвечают на типовые вопросы и сами записывают на встречу — днём, ночью и в выходные.</p>
+          </div>
+          <div class="chat" aria-hidden="true">
+            <div class="chat__msg chat__msg--in">Здравствуйте! Успеете доставить завтра?</div>
+            <div class="chat__msg chat__msg--out">Добрый вечер! Да, привезём до 14:00. Оформить заказ?</div>
+            <div class="chat__msg chat__msg--in">Да, давайте</div>
+            <div class="chat__msg chat__msg--out">Готово ✓ Заказ №2417 передан менеджеру</div>
+            <div class="chat__typing"><i></i><i></i><i></i></div>
+          </div>
+        </div>
+        <img class="svc__icon" src="assets/img/icon-bot.webp" alt="" loading="lazy" width="720" height="720">
+      </article>
+
+      <!-- Интеграции -->
+      <article class="svc svc--aqua tilt" data-cursor="Подробнее">
+        <div class="svc__spot"></div>
+        <div class="svc__top mono"><span>02</span><span>Интеграции</span></div>
+        <svg class="flow" viewBox="0 0 300 180" aria-hidden="true">
+          <path class="flow__line" d="M50 40 C120 40 120 90 150 90"/>
+          <path class="flow__line" d="M50 140 C120 140 120 90 150 90"/>
+          <path class="flow__line" d="M150 90 C180 90 180 40 250 40"/>
+          <path class="flow__line" d="M150 90 C180 90 180 140 250 140"/>
+          <path class="flow__pulse" d="M50 40 C120 40 120 90 150 90 C180 90 180 140 250 140"/>
+          <path class="flow__pulse flow__pulse--2" d="M50 140 C120 140 120 90 150 90 C180 90 180 40 250 40"/>
+          <g class="flow__node"><rect x="16" y="26" width="68" height="28" rx="14"/><text x="50" y="44">CRM</text></g>
+          <g class="flow__node"><rect x="16" y="126" width="68" height="28" rx="14"/><text x="50" y="144">1С</text></g>
+          <g class="flow__node"><rect x="216" y="26" width="68" height="28" rx="14"/><text x="250" y="44">Чаты</text></g>
+          <g class="flow__node"><rect x="216" y="126" width="68" height="28" rx="14"/><text x="250" y="144">Оплаты</text></g>
+          <circle class="flow__hub" cx="150" cy="90" r="16"/>
+          <circle class="flow__hub-dot" cx="150" cy="90" r="5"/>
+        </svg>
+        <h3>Данные ходят сами</h3>
+        <p>CRM, мессенджеры, 1С, таблицы и платежи обмениваются данными без ручного переноса.</p>
+      </article>
+
+      <!-- Внутренние сервисы -->
+      <article class="svc svc--paper tilt" data-cursor="Подробнее">
+        <div class="svc__spot"></div>
+        <div class="svc__top mono"><span>03</span><span>Внутренние сервисы</span></div>
+        <div class="dash" aria-hidden="true">
+          <div class="dash__side"><i></i><i></i><i></i><i></i></div>
+          <div class="dash__main">
+            <div class="dash__row"><span class="dash__kpi"><b class="count" data-to="128">0</b><small>заказов</small></span><span class="dash__kpi dash__kpi--o"><b class="count" data-to="94">0</b><small>% в срок</small></span></div>
+            <div class="dash__bars"><i style="--h:40%"></i><i style="--h:65%"></i><i style="--h:50%"></i><i style="--h:85%"></i><i style="--h:70%"></i><i style="--h:95%"></i><i style="--h:60%"></i></div>
+          </div>
+        </div>
+        <h3>Под ваш процесс, а не под шаблон</h3>
+        <p>Личные кабинеты, панели, калькуляторы — ровно под то, как работает ваша команда.</p>
+        <img class="svc__icon svc__icon--sm" src="assets/img/icon-panel.webp" alt="" loading="lazy" width="720" height="720">
+      </article>
+
+      <!-- Отчётность -->
+      <article class="svc svc--dark tilt" data-cursor="Подробнее">
+        <div class="svc__spot"></div>
+        <div class="svc__top mono"><span>04</span><span>Автоотчётность</span></div>
+        <div class="report" aria-hidden="true">
+          <div class="report__head"><span class="mono">Выручка · неделя</span><b>+<span class="count" data-to="18">0</span>%</b></div>
+          <svg class="report__chart" viewBox="0 0 260 110" preserveAspectRatio="none">
+            <defs><linearGradient id="rg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D97757" stop-opacity=".45"/><stop offset="1" stop-color="#D97757" stop-opacity="0"/></linearGradient></defs>
+            <path class="report__area" d="M0 90 C30 85 40 70 65 72 S105 50 130 55 S170 30 195 35 S235 12 260 10 L260 110 L0 110Z"/>
+            <path class="report__line" d="M0 90 C30 85 40 70 65 72 S105 50 130 55 S170 30 195 35 S235 12 260 10"/>
+            <circle class="report__dot" cx="260" cy="10" r="5"/>
+          </svg>
+          <div class="report__toast"><i class="dot dot--aqua"></i>Отчёт отправлен в Telegram · 08:00</div>
+        </div>
+        <h3>Цифры приходят к вам утром</h3>
+        <p>Продажи, финансы и реклама собираются сами — без «скинь табличку».</p>
+      </article>
+
+      <!-- Сайты -->
+      <article class="svc svc--paper tilt" data-cursor="Подробнее">
+        <div class="svc__spot"></div>
+        <div class="svc__top mono"><span>05</span><span>Сайты и лендинги</span></div>
+        <div class="lead-form" aria-hidden="true">
+          <div class="lead-form__field"><span class="lead-form__typed" data-text="Анна, +7 900 …"></span><i class="lead-form__caret"></i></div>
+          <div class="lead-form__btn">Отправить</div>
+          <div class="lead-form__crm"><i class="dot dot--aqua"></i>Новая сделка в CRM · менеджер уведомлён</div>
+        </div>
+        <h3>Форма сразу заводит сделку</h3>
+        <p>Заявка с сайта попадает в CRM, а менеджер получает уведомление через секунду.</p>
+        <img class="svc__icon svc__icon--sm" src="assets/img/icon-site.webp" alt="" loading="lazy" width="720" height="720">
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. ПОЧЕМУ МЫ (горизонтальный скролл) ============ -->
+<section class="why" id="why" data-theme="light">
+  <div class="why__pin">
+    <div class="why__track">
+      <div class="why__intro">
+        <div class="label"><i class="dot"></i><span class="scramble">(03) Почему мы</span></div>
+        <h2 class="h2">Чем мы отличаемся от&nbsp;студии и&nbsp;фрилансера.</h2>
+        <p class="lead">Скорость фрилансера, ответственность студии. И пять правил, которые мы не нарушаем.</p>
+        <div class="why__hint mono"><span class="why__hint-line"></span>Листайте</div>
+      </div>
+      <figure class="why__photo">
+        <img src="assets/img/office.webp" alt="Ресепшен KAI Agency с подсвеченным логотипом" loading="lazy" width="1800" height="1012">
+        <figcaption class="tag tag--glass"><i class="dot"></i>Офис KAI</figcaption>
+      </figure>
+      <article class="why-card why-card--paper">
+        <div class="why-card__n">01</div>
+        <div class="why-card__meter"><span class="mono">Срок</span><b>2–4 нед.</b></div>
+        <h3>Сдаём за недели</h3>
+        <p>Код пишем с ИИ, поэтому типовой проект занимает 2–4 недели, а не полгода.</p>
+      </article>
+      <article class="why-card why-card--dark">
+        <div class="why-card__n">02</div>
+        <div class="why-card__meter"><span class="mono">Окупаемость</span><b>≤ 6 мес.</b></div>
+        <h3>Сначала считаем выгоду</h3>
+        <p>Если автоматизация не окупится за 6 месяцев, скажем об этом до договора.</p>
+      </article>
+      <article class="why-card why-card--orange">
+        <div class="why-card__n">03</div>
+        <div class="why-card__meter"><span class="mono">Цена</span><b>фикс</b></div>
+        <h3>Фиксируем цену и срок</h3>
+        <p>Сумма в договоре не меняется, а за просрочку отвечаем деньгами.</p>
+      </article>
+      <article class="why-card why-card--aqua">
+        <div class="why-card__n">04</div>
+        <div class="why-card__meter"><span class="mono">Доступы</span><b>100% ваши</b></div>
+        <h3>Отдаём всё вам</h3>
+        <p>Код, доступы и инструкции остаются у вас. Вы от нас не зависите.</p>
+      </article>
+      <article class="why-card why-card--paper">
+        <div class="why-card__n">05</div>
+        <div class="why-card__meter"><span class="mono">Обучили</span><b>51 сотр.</b></div>
+        <h3>Учим команду</h3>
+        <p>За плечами обучение 51 сотрудника в корпоративном проекте. Внедряем так, чтобы люди этим пользовались.</p>
+      </article>
+    </div>
+    <div class="why__progress container">
+      <span class="why__count mono"><b class="why__current">01</b> / 05</span>
+      <span class="why__bar"><i></i></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. КОМУ ПОДХОДИМ (орбиты) ============ -->
+<section class="fit" id="fit" data-theme="orange">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <div class="label label--light"><i class="dot dot--aqua"></i><span class="scramble">(04) Кому подходим</span></div>
+        <h2 class="h2 h2--light split-lines">Мы сработаемся, если…</h2>
+      </div>
+      <p class="lead lead--light fade-up">Мы честно говорим «нет», когда автоматизация не принесёт вам денег. Так лучше для обоих.</p>
+    </div>
+
+    <div class="fit__grid">
+      <div class="orbit" aria-hidden="true">
+        <div class="orbit__glow"></div>
+        <div class="orbit__ring orbit__ring--1"><span class="orbit__sat"><img src="assets/img/avatar-3.webp" alt=""></span><span class="orbit__sat orbit__sat--b"><img src="assets/img/avatar-6.webp" alt=""></span></div>
+        <div class="orbit__ring orbit__ring--2"><span class="orbit__sat"><img src="assets/img/avatar-1.webp" alt=""></span><span class="orbit__sat orbit__sat--b"><img src="assets/img/icon-chart.webp" alt=""></span><span class="orbit__sat orbit__sat--c"><img src="assets/img/avatar-5.webp" alt=""></span></div>
+        <div class="orbit__ring orbit__ring--3"><span class="orbit__sat"><img src="assets/img/avatar-2.webp" alt=""></span><span class="orbit__sat orbit__sat--b"><img src="assets/img/icon-integr.webp" alt=""></span><span class="orbit__sat orbit__sat--c"><img src="assets/img/avatar-4.webp" alt=""></span></div>
+        <div class="orbit__core">
+          <svg viewBox="0 0 40 40"><path d="M34.77 17.4 A15 15 0 1 1 26.34 6.41" /><circle cx="31.98" cy="10.97" r="3.2" /></svg>
+        </div>
+        <div class="orbit__caption mono">Компании от 5 человек · услуги, торговля, производство</div>
+      </div>
+
+      <div class="fit__lists">
+        <ul class="yes">
+          <li><i class="yes__ic"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>В компании от <b>5 сотрудников</b> и есть повторяющиеся процессы</span></li>
+          <li><i class="yes__ic"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Заявки, отчёты или документы сейчас ведутся <b>вручную</b></span></li>
+          <li><i class="yes__ic"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><span>Готовы выделить <b>одного человека</b>, который покажет, как устроен процесс</span></li>
+        </ul>
+        <div class="no">
+          <div class="no__title">Не возьмёмся, если</div>
+          <ul>
+            <li><i class="no__ic"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17"/></svg></i><span class="no__text">Процесса ещё нет — автоматизировать хаос бессмысленно</span></li>
+            <li><i class="no__ic"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17"/></svg></i><span class="no__text">Нужен «сайт как у конкурента, только дешевле»</span></li>
+            <li><i class="no__ic"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17"/></svg></i><span class="no__text">Задача — заменить всю команду ИИ за месяц</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. ПРОЦЕСС ============ -->
+<section class="process" id="process" data-theme="light">
+  <div class="container process__grid">
+    <div class="process__sticky">
+      <div class="label"><i class="dot"></i><span class="scramble">(05) Порядок работы</span></div>
+      <h2 class="h2 split-lines">От созвона до&nbsp;результата — 4&nbsp;шага.</h2>
+      <div class="odo" aria-hidden="true">
+        <span class="odo__zero">0</span>
+        <span class="odo__window"><span class="odo__reel"><span>1</span><span>2</span><span>3</span><span>4</span></span></span>
+        <span class="odo__total mono">/ 04</span>
+      </div>
+      <div class="process__clock mono"><i class="dot dot--pulse"></i><span class="process__phase">Разбор · 30 минут</span></div>
+    </div>
+    <ol class="steps">
+      <li class="steps__line" aria-hidden="true"><span class="steps__fill"></span><span class="steps__runner"></span></li>
+      <li class="step">
+        <span class="step__node"></span>
+        <div class="step__meta mono"><span>Шаг 01</span><span class="step__pill">30 минут · бесплатно</span></div>
+        <h3>Разбор</h3>
+        <p>Находим процесс, который съедает больше всего времени, и считаем, сколько он стоит вам в месяц.</p>
+      </li>
+      <li class="step">
+        <span class="step__node"></span>
+        <div class="step__meta mono"><span>Шаг 02</span><span class="step__pill">2 дня</span></div>
+        <h3>План и смета</h3>
+        <p>Фиксируем, что делаем, когда сдаём и сколько это стоит. Цифры в договоре больше не меняются.</p>
+      </li>
+      <li class="step">
+        <span class="step__node"></span>
+        <div class="step__meta mono"><span>Шаг 03</span><span class="step__pill">2–4 недели</span></div>
+        <h3>Разработка</h3>
+        <p>Каждую неделю показываем работающую часть, а не отчёт о проделанной работе.</p>
+        <div class="step__weeks" aria-hidden="true"><i>Нед. 1</i><i>Нед. 2</i><i>Нед. 3</i><i>Нед. 4</i></div>
+      </li>
+      <li class="step">
+        <span class="step__node"></span>
+        <div class="step__meta mono"><span>Шаг 04</span><span class="step__pill">30 дней поддержки</span></div>
+        <h3>Запуск и поддержка</h3>
+        <p>Обучаем команду и бесплатно правим всё, что всплывёт в первый месяц.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 7. КЕЙСЫ ============ -->
+<section class="cases" id="cases" data-theme="dark">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <div class="label label--light"><i class="dot"></i><span class="scramble">(06) Кейсы</span></div>
+        <h2 class="h2 split-lines">Что получили клиенты.</h2>
+      </div>
+      <p class="lead lead--light fade-up">Ниша → что было → что сделали → цифра. Без «повысили эффективность».</p>
+    </div>
+
+    <div class="case-stack">
+      <article class="case" data-cursor="Кейс">
+        <div class="case__media"><img src="assets/img/case1.webp" alt="Прораб на стройке смотрит в смартфон" loading="lazy" width="1400" height="1050"><span class="tag tag--glass"><i class="dot"></i>Строительство</span></div>
+        <div class="case__body">
+          <div class="case__index mono">Кейс 01 / 03</div>
+          <h3>Заявки больше не теряются в&nbsp;мессенджерах</h3>
+          <dl class="case__steps">
+            <div><dt class="mono">Было</dt><dd>Заявки приходили в три мессенджера, часть терялась</dd></div>
+            <div><dt class="mono">Сделали</dt><dd>Бот принимает заявку и сразу передаёт её в CRM</dd></div>
+          </dl>
+          <div class="case__result">
+            <div class="case__before"><span class="mono">Ответ клиенту</span><s>2 часа</s></div>
+            <div class="case__arrow"><svg viewBox="0 0 40 16"><path d="M0 8h36M30 2l6 6-6 6"/></svg></div>
+            <div class="case__after"><b><span class="count" data-from="120" data-to="1">120</span></b><span>минута</span></div>
+          </div>
+          <div class="case__extra"><b>0</b> потерянных заявок</div>
+        </div>
+      </article>
+
+      <article class="case case--light" data-cursor="Кейс">
+        <div class="case__media"><img src="assets/img/case2.webp" alt="Владелица ресторана с планшетом" loading="lazy" width="1400" height="1050"><span class="tag tag--glass"><i class="dot"></i>Общепит</span></div>
+        <div class="case__body">
+          <div class="case__index mono">Кейс 02 / 03</div>
+          <h3>Отчёт по выручке собирается сам</h3>
+          <dl class="case__steps">
+            <div><dt class="mono">Было</dt><dd>Управляющий каждый понедельник сводил кассу, доставку и закупки в таблицу</dd></div>
+            <div><dt class="mono">Сделали</dt><dd>Автоотчёт из кассы и учётной системы — в Telegram владельцу к 9:00</dd></div>
+          </dl>
+          <div class="case__result">
+            <div class="case__before"><span class="mono">Ручная работа</span><s>6 ч / нед.</s></div>
+            <div class="case__arrow"><svg viewBox="0 0 40 16"><path d="M0 8h36M30 2l6 6-6 6"/></svg></div>
+            <div class="case__after"><b><span class="count" data-from="6" data-to="0">6</span></b><span>часов</span></div>
+          </div>
+          <div class="case__extra"><b>каждое утро</b> — свежие цифры</div>
+        </div>
+      </article>
+
+      <article class="case case--orange" data-cursor="Кейс">
+        <div class="case__media"><img src="assets/img/case3.webp" alt="Менеджер склада с планшетом" loading="lazy" width="1400" height="1050"><span class="tag tag--glass"><i class="dot"></i>Дистрибуция</span></div>
+        <div class="case__body">
+          <div class="case__index mono">Кейс 03 / 03</div>
+          <h3>Остатки сходятся без ручной сверки</h3>
+          <dl class="case__steps">
+            <div><dt class="mono">Было</dt><dd>Менеджеры сверяли остатки 1С и таблиц вручную перед каждой отгрузкой</dd></div>
+            <div><dt class="mono">Сделали</dt><dd>Интеграция 1С ↔ CRM ↔ таблицы с обновлением каждые 5 минут</dd></div>
+          </dl>
+          <div class="case__result">
+            <div class="case__before"><span class="mono">Сверка</span><s>2 дня</s></div>
+            <div class="case__arrow"><svg viewBox="0 0 40 16"><path d="M0 8h36M30 2l6 6-6 6"/></svg></div>
+            <div class="case__after"><b><span class="count" data-from="2880" data-to="15">2880</span></b><span>минут</span></div>
+          </div>
+          <div class="case__extra"><b>1 сотрудник</b> освобождён для продаж</div>
+        </div>
+      </article>
+    </div>
+    <p class="cases__note mono">* Цифры в кейсах иллюстративные — структура карточки для реальных проектов.</p>
+  </div>
+</section>
+
+<!-- ============ 8. ФИНАЛЬНЫЙ ПРИЗЫВ ============ -->
+<section class="cta" id="cta" data-theme="dark">
+  <img class="cta__bg" src="assets/img/waves.webp" alt="" loading="lazy" width="2200" height="1238">
+  <div class="cta__blob" aria-hidden="true"></div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Записаться на разбор</span><i class="marquee__mark"></i><span>30 минут в Zoom</span><i class="marquee__mark"></i><span>Бесплатно</span><i class="marquee__mark"></i>
+      <span>Записаться на разбор</span><i class="marquee__mark"></i><span>30 минут в Zoom</span><i class="marquee__mark"></i><span>Бесплатно</span><i class="marquee__mark"></i>
+    </div>
+  </div>
+
+  <div class="container cta__grid">
+    <div class="cta__left">
+      <div class="label label--light"><i class="dot dot--aqua"></i><span class="scramble">(07) Бесплатный разбор</span></div>
+      <h2 class="cta__title split-lines">Узнайте за&nbsp;30&nbsp;минут, сколько часов и&nbsp;денег уходит на&nbsp;<span class="cta__hl">ручную работу</span></h2>
+      <p class="lead lead--light fade-up">На разборе назовём процесс, который стоит автоматизировать первым, срок и цену. Заказывать после этого необязательно.</p>
+      <div class="cta__portrait">
+        <img src="assets/img/cta-portrait.webp" alt="Мужчина в хромированном AR-визоре в профиль" loading="lazy" width="1300" height="1733">
+      </div>
+    </div>
+
+    <form class="form" novalidate>
+      <div class="form__head">
+        <span class="mono">Заявка на разбор</span>
+        <span class="seats"><i></i><i></i><i></i></span>
+      </div>
+      <label class="field"><input type="text" name="name" required autocomplete="name" placeholder=" "><span>Имя</span><i class="field__line"></i></label>
+      <label class="field"><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder=" "><span>Телефон</span><i class="field__line"></i></label>
+      <label class="field"><input type="text" name="business" required placeholder=" "><span>Чем занимается компания</span><i class="field__line"></i></label>
+      <button type="submit" class="btn btn--orange btn--block magnetic" data-cursor="Жми">
+        <span class="btn__label">Записаться на разбор</span>
+        <i class="btn__arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></i>
+      </button>
+      <p class="form__note"><i class="dot dot--pulse"></i>В октябре осталось <b>3 места</b></p>
+      <div class="form__success" aria-live="polite">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-15"/></svg>
+        <b>Заявка принята</b>
+        <span>Напишем в течение часа и подберём время для Zoom.</span>
+      </div>
+    </form>
+  </div>
+
+  <footer class="footer container">
+    <div class="footer__word" aria-hidden="true"><span>K</span><span>A</span><span>I</span></div>
+    <div class="footer__row">
+      <span class="logo logo--light"><svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M34.77 17.4 A15 15 0 1 1 26.34 6.41" /><circle cx="31.98" cy="10.97" r="3.2" /></svg><span class="logo__word">KAI<em>agency</em></span></span>
+      <nav class="footer__nav"><a href="#services">Услуги</a><a href="#process">Процесс</a><a href="#cases">Кейсы</a><a href="#cta">Связаться</a></nav>
+      <span class="mono footer__copy">© 2026 KAI Agency</span>
+    </div>
+  </footer>
+</section>
+
+</main>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
